@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logoutbtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="23dp"
+        android:text="Logout"
+        android:textColor="@color/white"
+        app:backgroundTint="#E62323"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Username"
+        android:textColor="@color/white"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/logoutbtn"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:id="@+id/loadoutbtn"
+        android:layout_below="@+id/username"
+        android:text="Create Loadout"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:id="@+id/metasbtn"
+        android:layout_below="@+id/loadoutbtn"
+        android:text="View Metas"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:id="@+id/newsbtn"
+        android:layout_below="@+id/metasbtn"
+        android:text="COD News"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:id="@+id/adminbtn"
+        android:layout_below="@+id/newsbtn"
+        android:text="Admin Edit"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>
