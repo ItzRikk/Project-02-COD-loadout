@@ -1,6 +1,7 @@
 package com.example.codloadoutproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +9,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.example.codloadoutproject.DB.DataBase;
+import com.example.codloadoutproject.DB.UserDAO;
 import com.google.android.material.button.MaterialButton;
 
 public class LandingPage1Activity extends AppCompatActivity {
@@ -15,6 +19,7 @@ public class LandingPage1Activity extends AppCompatActivity {
 
     public static String username;
     public static boolean isAdmin;
+    private UserDAO userDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,7 @@ public class LandingPage1Activity extends AppCompatActivity {
             admin.setVisibility(View.INVISIBLE);
         }
         textLogout =findViewById(R.id.logoutbtn);
+        getDatabase();
 
         textLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +47,13 @@ public class LandingPage1Activity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    private void getDatabase() {
+        userDAO = Room.databaseBuilder(this, DataBase.class, DataBase.DATABASE_NAME)
+                .allowMainThreadQueries()
+                .fallbackToDestructiveMigration()
+                .build()
+                .UserDAO();
     }
 
 

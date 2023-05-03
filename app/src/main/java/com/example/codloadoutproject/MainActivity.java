@@ -1,6 +1,7 @@
 package com.example.codloadoutproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,10 +12,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.example.codloadoutproject.DB.DataBase;
+import com.example.codloadoutproject.DB.UserDAO;
 import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {
     TextView textSignUp;
+    private UserDAO userDAO;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -32,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+        getDatabase();
 
         TextView username =  (TextView) findViewById(R.id.username);
         TextView password =  (TextView) findViewById(R.id.password);
@@ -41,25 +47,35 @@ public class MainActivity extends AppCompatActivity {
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(username.getText().toString().equals("admin2") && password.getText().toString().equals("admin2")){
-                    Toast.makeText(MainActivity.this,"LOGIN SUCCESSFULL",Toast.LENGTH_SHORT).show();
+                if(username.getText().toString().equals("admin2") && password.getText().toString().equals("admin2")) {
+                    Toast.makeText(MainActivity.this, "LOGIN SUCCESSFULL", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, LandingPage1Activity.class);
                     LandingPage1Activity.username = username.getText().toString();
                     LandingPage1Activity.isAdmin = true;
                     startActivity(intent);
                     finish();
-                }else if(username.getText().toString().equals("testuser1") && password.getText().toString().equals("testuser1")){
+                }
+                User pass = userDAO.getPasswordbyPassword(password.getText().toString());
+                User user = userDAO.getUsernameByUsername(username.getText().toString());
+                if(user != null && pass != null){
                     Toast.makeText(MainActivity.this,"LOGIN SUCCESSFULL",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, LandingPage1Activity.class);
                     LandingPage1Activity.username = username.getText().toString();
                     LandingPage1Activity.isAdmin = false;
                     startActivity(intent);
                     finish();
-                }else{
-                    Toast.makeText(MainActivity.this,"LOGIN FAILED !!!",Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
 
+
+    }
+    private void getDatabase() {
+        userDAO = Room.databaseBuilder(this, DataBase.class, DataBase.DATABASE_NAME)
+                .allowMainThreadQueries()
+                .fallbackToDestructiveMigration()
+                .build()
+                .UserDAO();
     }
 }

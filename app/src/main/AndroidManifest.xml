@@ -12,6 +12,30 @@
         android:theme="@style/Theme.CODLoadoutProject"
         tools:targetApi="31">
         <activity
+            android:name=".NewsDetails"
+            android:exported="false" />
+        <activity
+            android:name=".AdminEdit"
+            android:exported="false" />
+        <activity
+            android:name=".AdminNews"
+            android:exported="false" />
+        <activity
+            android:name=".AdminMetas"
+            android:exported="false" />
+        <activity
+            android:name=".AdminWeapons"
+            android:exported="false" />
+        <activity
+            android:name=".CodNews"
+            android:exported="false" />
+        <activity
+            android:name=".Metas"
+            android:exported="false" />
+        <activity
+            android:name=".Loadout"
+            android:exported="false" />
+        <activity
             android:name=".LandingPage1Activity"
             android:exported="false" />
         <activity

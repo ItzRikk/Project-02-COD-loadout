@@ -4,80 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/user"
     tools:context=".MainActivity">
+
     <TextView
+        android:id="@+id/CLtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/signin"
-        android:text="Sign In"
-        android:textColor="@color/white"
-        android:textSize="35dp"
-        android:layout_margin="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
         android:gravity="center"
+        android:text="Create Loadout"
+        android:textColor="@color/white"
+        android:textSize="45dp"
         android:textStyle="bold"/>
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/primarytext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/signin"
+        android:layout_below="@id/CLtitle"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#30ffffff"
-        android:drawableLeft="@drawable/baseline_person_outline_24"
         android:drawablePadding="20dp"
-        android:hint="Username"
+        android:hint="Primary Weapon"
         android:padding="20dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/secondarytext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/username"
+        android:layout_below="@id/primarytext"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#30ffffff"
-        android:drawableLeft="@drawable/baseline_key_24"
         android:drawablePadding="20dp"
-        android:hint="Password"
+        android:hint="Secondary Weapon"
         android:padding="20dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:inputType="textPassword"/>
+        android:textColorHint="@color/white" />
 
     <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/loginbtn"
-        android:layout_below="@+id/password"
-        android:text="LOGIN"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/white"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/signupbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/loginbtn"
+        android:id="@+id/EWsecondary"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/secondarytext"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:backgroundTint="@color/white"
-        android:text="SignUp"
+        android:text="Save"
         android:textColor="@color/black" />
-
-
-
 
 </RelativeLayout>

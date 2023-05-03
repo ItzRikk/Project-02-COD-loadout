@@ -1,6 +1,15 @@
 package com.example.codloadoutproject;
 
+
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import com.example.codloadoutproject.DB.DataBase;
+
+@Entity(tableName = DataBase.USER_TABLE)
 public class User {
+    @PrimaryKey(autoGenerate = true)
+    private int userID;
     private String username;
     private String password;
     private boolean isAdmin;
@@ -18,6 +27,14 @@ public class User {
                 ", password='" + password + '\'' +
                 ", isAdmin=" + isAdmin +
                 '}';
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     public String getUsername() {
