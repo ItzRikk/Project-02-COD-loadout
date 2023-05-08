@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/admin"
+    tools:context=".RemoveUser">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/RUreturnbtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="23dp"
+        android:text="Return"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/RUtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Manage User"
+        android:textColor="@color/white"
+        android:textSize="45dp"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/select"
+        android:background="#90ffffff"
+        android:layout_marginTop="140dp"
+        >
+        <AutoCompleteTextView
+            android:id="@+id/RUdorpDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/RUremoveUserbtn"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:text="Remove User"
+        android:textColor="@color/black" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

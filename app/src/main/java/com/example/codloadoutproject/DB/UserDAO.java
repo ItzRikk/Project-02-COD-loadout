@@ -6,9 +6,11 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
+import com.example.codloadoutproject.Metas;
 import com.example.codloadoutproject.User;
 
 import java.util.List;
+
 
 @Dao
 public interface UserDAO {
@@ -29,4 +31,7 @@ public interface UserDAO {
 
     @Query("SELECT * FROM " + DataBase.USER_TABLE + " WHERE password = :password")
     User getPasswordbyPassword(String password);
+
+    @Query("SELECT * FROM " + DataBase.USER_TABLE + " ORDER BY username desc")
+    List<User> getUsers();
 }

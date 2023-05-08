@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">COD Loadout Project</string>
+    <string name="select">Select Item</string>
 </resources>

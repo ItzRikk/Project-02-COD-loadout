@@ -7,6 +7,18 @@
     android:background="@drawable/admin"
     tools:context=".MainActivity">
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ADreturnbtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="23dp"
+        android:text="Return"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        android:textStyle="bold"/>
+
     <TextView
         android:id="@+id/ADadmin"
         android:layout_width="match_parent"
@@ -23,23 +35,10 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/ADWeaponsbtn"
-        android:layout_width="250dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="200dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/white"
-        android:text="Add / Remove Weapons"
-        android:textColor="@color/black"/>
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/ADmetasbtn"
         android:layout_width="250dp"
         android:layout_height="80dp"
-        android:layout_below="@+id/ADWeaponsbtn"
+        android:layout_below="@+id/ADadmin"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
@@ -50,15 +49,31 @@
         android:textColor="@color/black" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/ADnewsbtn"
         android:layout_width="250dp"
         android:layout_height="80dp"
-        android:id="@+id/ADnewsbtn"
         android:layout_below="@+id/ADmetasbtn"
-        android:text="Add / Remove COD News"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/white"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/white"
+        android:text="Add COD News"
+        android:textColor="@color/black" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ADremovebtn"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/ADnewsbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/white"
+        android:text="Remove User"
+        android:textColor="@color/black" />
 
 
 
