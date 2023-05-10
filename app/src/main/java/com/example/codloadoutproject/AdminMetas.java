@@ -102,6 +102,7 @@ public class AdminMetas extends AppCompatActivity {
                 String loadout = autoCompleteTextView.getAdapter().getItem(position).toString();
                 int index = loadout.indexOf(":");
                 String finalString = loadout.substring(0,index);
+
                 selectedWeapon = metasDAO.getTitleMetasByTitleMetas(finalString);
             }
         });
